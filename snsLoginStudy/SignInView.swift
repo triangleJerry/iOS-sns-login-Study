@@ -9,42 +9,52 @@ import SwiftUI
 import AuthenticationServices
 
 struct SignInView: View {
-    
+
     var body: some View {
         
-        SignInWithAppleButton(.signUp) { request in
-              request.requestedScopes = [.fullName, .email]
-          } onCompletion: { result in
-              switch result {
-              case .success(let authorization):
-                  handleSuccessfulLogin(with: authorization)
-              case .failure(let error):
-                  handleLoginError(with: error)
-              }
-          }
-          .frame(height: 50)
-          .padding()
+        VStack {
+            
+            Spacer()
+
+            SignInWithAppleButton(.signUp) { request in
+                request.requestedScopes = [.fullName, .email]
+            } onCompletion: { result in
+                switch result {
+                case .success(let authorization):
+                    handleAppleSignInSuccess(with: authorization)
+                case .failure(let error):
+                    handleAppleSignInFailure(with: error)
+                }
+            }
+            .frame(height: 56)
+            .padding()
+        }
+        .padding()
     }
     
     // MARK: - func
     
-    private func handleSuccessfulLogin(with authorization: ASAuthorization) {
+    /// Apple 로그인 성공 처리
+    private func handleAppleSignInSuccess(with authorization: ASAuthorization) {
+        
         if let userCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            print(userCredential.user)
+            let userId = userCredential.user
+            KeychainHelper.shared.save(Data(userId.utf8), service: "com.snsLoginStudy", account: "userId")
             
-            if userCredential.authorizedScopes.contains(.fullName) {
-                print(userCredential.fullName?.givenName ?? "No given name")
+            if let fullName = userCredential.fullName?.givenName {
+                KeychainHelper.shared.save(Data(fullName.utf8), service: "com.snsLoginStudy", account: "fullName")
             }
             
-            if userCredential.authorizedScopes.contains(.email) {
-                print(userCredential.email ?? "No email")
+            if let email = userCredential.email {
+                KeychainHelper.shared.save(Data(email.utf8), service: "com.snsLoginStudy", account: "email")
             }
         }
     }
     
-    private func handleLoginError(with error: Error) {
+    /// Apple 로그인 실패 처리
+    private func handleAppleSignInFailure(with error: Error) {
         
-        print("Could not authenticate: \\(error.localizedDescription)")
+        print("Could not authenticate: \(error.localizedDescription)")
     }
 }
 
