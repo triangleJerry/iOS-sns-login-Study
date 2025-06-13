@@ -47,4 +47,17 @@ struct KeychainHelper {
         guard status == errSecSuccess else { return nil }
         return item as? Data
     }
+
+    /// 키체인에서 데이터 삭제
+    /// - Parameters:
+    ///   - service: 서비스 식별자
+    ///   - account: 계정 식별자
+    func delete(service: String, account: String) {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: service,
+            kSecAttrAccount as String: account
+        ]
+        SecItemDelete(query as CFDictionary)
+    }
 }

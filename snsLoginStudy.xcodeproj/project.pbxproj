@@ -12,6 +12,8 @@
 		0525FEDE2DFBB9A3009A8E67 /* snsLoginStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */; };
 		0525FEF82DFBBDD5009A8E67 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FEF72DFBBDD5009A8E67 /* SignInView.swift */; };
 		0525FEFD2DFBEC5C009A8E67 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FEFC2DFBEC5C009A8E67 /* KeychainHelper.swift */; };
+		0525FF002DFBEEF0009A8E67 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FEFF2DFBEEF0009A8E67 /* RootView.swift */; };
+		0525FF022DFBF324009A8E67 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FF012DFBF324009A8E67 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		0525FEDF2DFBBB93009A8E67 /* snsLoginStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = snsLoginStudy.entitlements; sourceTree = "<group>"; };
 		0525FEF72DFBBDD5009A8E67 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0525FEFC2DFBEC5C009A8E67 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		0525FEFF2DFBEEF0009A8E67 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		0525FF012DFBF324009A8E67 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,12 @@
 		0525FEDB2DFBB9A3009A8E67 /* snsLoginStudy */ = {
 			isa = PBXGroup;
 			children = (
+				0525FF012DFBF324009A8E67 /* AuthViewModel.swift */,
+				0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */,
+				0525FEFE2DFBEECF009A8E67 /* View */,
 				0525FEF92DFBEAB7009A8E67 /* Apple */,
 				0525FEDF2DFBBB93009A8E67 /* snsLoginStudy.entitlements */,
 				0525FED82DFBB9A3009A8E67 /* Assets.xcassets */,
-				0525FED92DFBB9A3009A8E67 /* ContentView.swift */,
-				0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */,
-				0525FEF72DFBBDD5009A8E67 /* SignInView.swift */,
 			);
 			path = snsLoginStudy;
 			sourceTree = "<group>";
@@ -70,6 +74,16 @@
 				0525FEFC2DFBEC5C009A8E67 /* KeychainHelper.swift */,
 			);
 			path = Apple;
+			sourceTree = "<group>";
+		};
+		0525FEFE2DFBEECF009A8E67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0525FEFF2DFBEEF0009A8E67 /* RootView.swift */,
+				0525FEF72DFBBDD5009A8E67 /* SignInView.swift */,
+				0525FED92DFBB9A3009A8E67 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +160,10 @@
 			files = (
 				0525FEF82DFBBDD5009A8E67 /* SignInView.swift in Sources */,
 				0525FEDD2DFBB9A3009A8E67 /* ContentView.swift in Sources */,
+				0525FF022DFBF324009A8E67 /* AuthViewModel.swift in Sources */,
 				0525FEFD2DFBEC5C009A8E67 /* KeychainHelper.swift in Sources */,
 				0525FEDE2DFBB9A3009A8E67 /* snsLoginStudyApp.swift in Sources */,
+				0525FF002DFBEEF0009A8E67 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
