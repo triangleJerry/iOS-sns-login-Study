@@ -17,6 +17,7 @@
 		0525FED82DFBB9A3009A8E67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0525FED92DFBB9A3009A8E67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snsLoginStudyApp.swift; sourceTree = "<group>"; };
+		0525FEDF2DFBBB93009A8E67 /* snsLoginStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = snsLoginStudy.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +50,7 @@
 		0525FEDB2DFBB9A3009A8E67 /* snsLoginStudy */ = {
 			isa = PBXGroup;
 			children = (
+				0525FEDF2DFBBB93009A8E67 /* snsLoginStudy.entitlements */,
 				0525FED82DFBB9A3009A8E67 /* Assets.xcassets */,
 				0525FED92DFBB9A3009A8E67 /* ContentView.swift */,
 				0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */,
@@ -262,6 +264,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = snsLoginStudy/snsLoginStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K62H5CQC64;
@@ -293,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = snsLoginStudy/snsLoginStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K62H5CQC64;
