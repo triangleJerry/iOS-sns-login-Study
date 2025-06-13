@@ -10,6 +10,7 @@
 		0525FEDC2DFBB9A3009A8E67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0525FED82DFBB9A3009A8E67 /* Assets.xcassets */; };
 		0525FEDD2DFBB9A3009A8E67 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FED92DFBB9A3009A8E67 /* ContentView.swift */; };
 		0525FEDE2DFBB9A3009A8E67 /* snsLoginStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */; };
+		0525FEF82DFBBDD5009A8E67 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525FEF72DFBBDD5009A8E67 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		0525FED92DFBB9A3009A8E67 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snsLoginStudyApp.swift; sourceTree = "<group>"; };
 		0525FEDF2DFBBB93009A8E67 /* snsLoginStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = snsLoginStudy.entitlements; sourceTree = "<group>"; };
+		0525FEF72DFBBDD5009A8E67 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				0525FED82DFBB9A3009A8E67 /* Assets.xcassets */,
 				0525FED92DFBB9A3009A8E67 /* ContentView.swift */,
 				0525FEDA2DFBB9A3009A8E67 /* snsLoginStudyApp.swift */,
+				0525FEF72DFBBDD5009A8E67 /* SignInView.swift */,
 			);
 			path = snsLoginStudy;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0525FEF82DFBBDD5009A8E67 /* SignInView.swift in Sources */,
 				0525FEDD2DFBB9A3009A8E67 /* ContentView.swift in Sources */,
 				0525FEDE2DFBB9A3009A8E67 /* snsLoginStudyApp.swift in Sources */,
 			);
