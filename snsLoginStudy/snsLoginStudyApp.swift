@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct snsLoginStudyApp: App {
+    
+    @StateObject private var auth = AuthViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(auth)
         }
     }
 }
