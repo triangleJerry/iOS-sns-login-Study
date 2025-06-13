@@ -14,24 +14,30 @@ struct SignInView: View {
 
     var body: some View {
         
-        VStack {
+        GeometryReader { geometry in
             
-            Spacer()
-
-            SignInWithAppleButton(.signUp) { request in
-                request.requestedScopes = [.fullName, .email]
-            } onCompletion: { result in
-                switch result {
-                case .success(let authorization):
-                    auth.handleAppleSignInSuccess(with: authorization)
-                case .failure(let error):
-                    handleAppleSignInFailure(with: error)
+            ScrollView {
+                
+                VStack {
+                    
+                    Spacer()
+                    
+                    SignInWithAppleButton(.signIn) { request in
+                        request.requestedScopes = [.fullName, .email]
+                    } onCompletion: { result in
+                        switch result {
+                        case .success(let authorization):
+                            auth.handleAppleSignInSuccess(with: authorization)
+                        case .failure(let error):
+                            handleAppleSignInFailure(with: error)
+                        }
+                    }
+                    .frame(height: 56)
+                    .padding()
                 }
+                .frame(minHeight: geometry.size.height)
             }
-            .frame(height: 56)
-            .padding()
         }
-        .padding()
     }
     
     // MARK: - func
